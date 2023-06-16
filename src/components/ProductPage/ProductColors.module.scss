@@ -1,0 +1,28 @@
+.product-colors {
+  img {
+    width: 55px;
+    object-fit: cover;
+  }
+
+  img:nth-child(1) {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 497px) {
+  .product-colors {
+    img {
+      width: 48px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .product-colors {
+    img {
+      width: 60px;
+      object-fit: cover;
+    }
+  }
+}

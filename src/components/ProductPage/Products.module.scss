@@ -1,0 +1,40 @@
+.products-section {
+  width: 100%;
+  margin: 0 auto;
+
+  .actions {
+    display: flex;
+    margin: 0 auto;
+    gap: 1rem;
+    width: 95%;
+    // padding: 0 1rem;
+
+    .section2 {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  .products {
+    margin: 0 auto;
+    width: 95%;
+    display: flex;
+    // justify-content: center;
+    flex-flow: wrap;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .products-section {
+    .actions {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+      gap: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+

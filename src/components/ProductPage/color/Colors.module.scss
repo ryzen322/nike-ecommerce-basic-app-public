@@ -1,0 +1,97 @@
+.color-sections {
+  // margin: 0 auto;
+  display: flex;
+  width: 50%;
+  overflow: hidden;
+  max-height: 600px;
+  height: 41vw;
+  gap: 1rem;
+  //   width: 50%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  //   display: flex;
+
+  .slides {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // border: 1px solid #000;
+    width: 70px;
+    // height: 41vw;
+    overflow-y: scroll;
+    // padding: 0 0 2rem 0;
+
+    .display {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-radius: 5px;
+
+      img {
+        border-radius: 5px;
+        height: 100%;
+        width: 100%;
+        //   height: 60px;
+        //   width: 60px;
+        object-fit: cover;
+      }
+    }
+
+    .display::after {
+      border-radius: 5px;
+      content: "";
+      position: absolute;
+      // background: #000;
+      left: 0;
+      top: 0;
+
+      height: 100%;
+      width: 100%;
+      // border: 1px solid red;
+      // background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .display:hover::after,
+    .display .active::after {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  .slides::-webkit-scrollbar {
+    display: none;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+    img {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom center;
+    }
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .color-sections {
+    width: 100%;
+    height: 70vw;
+    position: static;
+    gap: 0.5rem;
+
+    .image {
+      // overflow: hidden;
+      img {
+        object-position: 50% 60%;
+        // transform: scale(1.3);
+      }
+    }
+  }
+}

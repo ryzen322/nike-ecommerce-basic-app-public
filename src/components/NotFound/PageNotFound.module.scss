@@ -1,0 +1,17 @@
+@use "../../sass/fonts.scss";
+@use "../../sass/colors.scss";
+
+.notFound-section {
+  height: 50vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-family: fonts.$primary-font;
+    font-size: 3rem;
+  }
+}

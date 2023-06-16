@@ -1,0 +1,26 @@
+@use "./sass/colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: colors.$primary-color;
+  // max-width: 1440px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.active::after {
+  background-color: rgba(0, 0, 0, 0.1);
+}

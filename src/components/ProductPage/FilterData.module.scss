@@ -1,0 +1,113 @@
+@use "../../sass/fonts.scss";
+@use "../../sass/colors.scss";
+
+.filter-section {
+  .responsive-filter {
+    display: none;
+    align-items: center;
+    justify-self: center;
+    padding: 0.75rem 2rem;
+    // border-radius: 30px;
+    background-color: colors.$font-primary;
+    color: colors.$primary-color;
+    border: 2px solid colors.$font-primary;
+    outline: none;
+    text-transform: uppercase;
+    font-family: fonts.$primary-font;
+    font-weight: 600;
+    transition: 0.3s;
+    gap: 0.5rem;
+    text-align: center;
+
+    .filter-icon {
+      font-size: 25px;
+    }
+  }
+
+  .filters {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+
+    a {
+      // margin: 0 1rem;
+      padding: 0.75rem 2rem;
+      border-radius: 30px;
+      background-color: colors.$font-primary;
+      color: colors.$primary-color;
+      border: 2px solid colors.$font-primary;
+      outline: none;
+      text-transform: uppercase;
+      font-family: fonts.$primary-font;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    a:hover,
+    a.active {
+      background-color: transparent;
+      border: 2px solid colors.$font-primary;
+      color: colors.$font-primary;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 601px) {
+  .filter-section {
+    .responsive-filter {
+      display: flex;
+      cursor: pointer;
+    }
+
+    .filters {
+      display: none;
+      // position: absolute;
+      // flex-direction: column;
+      // width: 50%;
+      // margin: 0;
+      // gap: 0;
+      // text-align: left;
+
+      a {
+        border-radius: 0;
+      }
+    }
+
+    .filters-active {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      width: 50%;
+      margin: 0;
+      gap: 0;
+      text-align: left;
+
+      a {
+        // margin: 0 1rem;
+        padding: 0.75rem 2rem;
+        border-radius: 0;
+        background-color: colors.$font-primary;
+        color: colors.$primary-color;
+        border: 2px solid colors.$font-primary;
+        outline: none;
+        text-transform: uppercase;
+        font-family: fonts.$primary-font;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      a:hover,
+      a:focus,
+      a.active {
+        background-color: colors.$primary-color;
+        border: 2px solid colors.$font-primary;
+        color: colors.$font-primary;
+        cursor: pointer;
+      }
+    }
+  }
+}

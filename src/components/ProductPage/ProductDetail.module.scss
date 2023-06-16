@@ -1,0 +1,67 @@
+@use "../../sass/colors.scss";
+@use "../../sass/fonts.scss";
+
+.productDetail-section {
+  //   height: 300vh;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  gap: 5%;
+
+  .details-section {
+    // min-width: 400px;
+    // max-width: 400px;
+    width: 50%;
+
+    .detail {
+      font-family: fonts.$primary-font;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+      p:nth-child(3) {
+        font-weight: 500;
+        font-size: 1.1rem;
+        padding-top: 1rem;
+      }
+    }
+    .detail > * {
+      padding: 0.1rem 0;
+    }
+
+    .description {
+      font-family: fonts.$primary-font;
+
+      p {
+        font-size: 1.1rem;
+        padding: 3rem 0;
+        line-height: 1.8rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .productDetail-section {
+    flex-direction: column;
+    gap: 5rem;
+
+    .details-section {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .productDetail-section {
+    gap: 2rem;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .productDetail-section {
+    width: 95%;
+  }
+}

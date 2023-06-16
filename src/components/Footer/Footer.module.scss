@@ -1,0 +1,166 @@
+@use "../../sass/colors.scss";
+@use "../../sass/fonts.scss";
+
+.footer-section {
+  background-color: colors.$font-primary;
+  height: 100%;
+  width: 100%;
+  color: colors.$primary-color;
+  padding: 2rem 4rem 0 4rem;
+
+  .upper-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0 3rem 0;
+
+    .first-section {
+      display: flex;
+      justify-content: space-between;
+      width: 45%;
+
+      .actions {
+        font-family: fonts.$tertiary-font;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .actions > * {
+        padding: 0.5rem 0;
+        letter-spacing: -0.8px;
+        color: colors.$primary-color;
+      }
+      .get-help {
+        p {
+          font-family: fonts.$primary-font;
+          font-weight: 300;
+          font-size: 0.8rem;
+          letter-spacing: 0.1px;
+          text-transform: capitalize;
+          padding: 0.4rem 0;
+          color: colors.$font-tertiary;
+
+          span {
+            font-family: fonts.$tertiary-font;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0;
+            color: colors.$primary-color;
+            letter-spacing: -0.8px;
+          }
+        }
+      }
+      .about {
+        p {
+          font-family: fonts.$primary-font;
+          font-weight: 300;
+          font-size: 0.8rem;
+          letter-spacing: 0.1px;
+          text-transform: capitalize;
+          padding: 0.4rem 0;
+          color: colors.$font-tertiary;
+
+          span {
+            font-family: fonts.$tertiary-font;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0;
+            color: colors.$primary-color;
+            letter-spacing: -0.8px;
+          }
+        }
+      }
+    }
+    .second-section {
+      .soc-meds {
+        display: flex;
+        h1 {
+          margin: 0 8px;
+          font-size: 18px;
+          display: flex;
+          border-radius: 30px;
+          padding: 0.5rem 0.5rem;
+          height: auto;
+          border: 1px solid transparent;
+          outline: 0;
+          color: colors.$font-primary;
+          background-color: colors.$font-tertiary;
+          transition: 0.2s;
+          cursor: pointer;
+        }
+        h1:hover {
+          background-color: colors.$secondary-color;
+        }
+      }
+    }
+  }
+  .lower-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: fonts.$primary-font;
+
+    .location {
+      display: flex;
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+
+      p {
+        padding: 0 0.5rem;
+        text-transform: capitalize;
+      }
+    }
+    .credits {
+      font-size: 0.8rem;
+      color: colors.$font-tertiary;
+      font-weight: 300;
+    }
+  }
+  .message {
+    p {
+      text-align: center;
+      padding: 0.5rem 0;
+      font-family: fonts.$quarternary-font;
+      font-size: 0.8rem;
+      color: colors.$font-tertiary;
+      font-weight: 300;
+      font-style: italic;
+    }
+    span {
+      color: red;
+    }
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .footer-section {
+    .upper-section {
+      .first-section {
+        width: 65%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .footer-section {
+    padding: 1rem 1rem 0 1rem;
+
+    .upper-section {
+      .first-section {
+        width: 85%;
+      }
+      .second-section {
+        .soc-meds {
+          display: block;
+
+          h1 {
+            margin: 8px 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use "../../sass/fonts.scss";
+@use "../../sass/colors.scss";
+
+select {
+  width: 100%;
+  padding: 1.1rem 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid colors.$font-tertiary;
+  font-size: 1rem;
+}

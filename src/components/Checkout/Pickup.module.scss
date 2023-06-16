@@ -1,0 +1,229 @@
+@use "../../sass/fonts.scss";
+@use "../../sass/colors.scss";
+
+.pickup-section {
+  margin: 2rem 0;
+  width: 100%;
+  font-family: fonts.$primary-font;
+
+  .heading {
+    width: 100%;
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+
+    h2::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  .pickup-location {
+    // padding: 1rem 0;
+    width: 100%;
+
+    .location {
+      label {
+        font-family: fonts.$secondary-font;
+        // top: -10px;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+        padding: 0 0.3rem;
+        // text-align: center;
+        background-color: colors.$primary-color;
+        top: 9px;
+        left: 1.1rem;
+        position: relative;
+      }
+      select {
+        width: 100%;
+        padding: 1.25rem 1rem;
+        border: 2px solid colors.$font-tertiary;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        appearance: none;
+        background-position: calc(100% - 12px) center !important;
+        background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
+          no-repeat;
+        // padding: 8px 32px 8px 16px;
+        background-size: 15px;
+      }
+    }
+
+    .pickup {
+      border-bottom: 1px solid colors.$font-secondary;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .heading {
+        h3 {
+          color: colors.$font-secondary;
+          font-weight: 400;
+          font-size: 1rem;
+        }
+      }
+
+      .inputs {
+        width: 100%;
+        height: 100px;
+        position: relative;
+
+        input,
+        label {
+          cursor: pointer;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border: 2px solid rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+        }
+        input[type="radio"] {
+          opacity: 0.011;
+          z-index: 100;
+        }
+        input[type="radio"]:checked + label {
+          border-color: #000;
+          border-radius: 6px;
+        }
+        label {
+          gap: 1rem;
+          cursor: pointer;
+          z-index: 90;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 1rem 1.5rem;
+          text-transform: capitalize;
+
+          .upper-part {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+              font-weight: 600;
+              font-size: 1.05rem;
+            }
+          }
+
+          .date-arrival {
+            p {
+              color: colors.$font-secondary;
+            }
+          }
+        }
+      }
+    }
+
+    .pickup-full-address {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-top: 3rem;
+
+      h3 {
+        padding-bottom: 0.5rem;
+        font-weight: 400;
+      }
+
+      p {
+        color: colors.$font-secondary;
+      }
+    }
+  }
+  .action {
+    margin-top: 3rem;
+    width: 100%;
+
+    .disabled[disabled="disabled"],
+    .disabled:disabled {
+      background-color: #eaeaea;
+      color: #c0c0c0;
+      border: 2px solid #c0c0c0;
+      cursor: not-allowed;
+      font-weight: 400;
+    }
+
+    button {
+      width: 100%;
+      padding: 1rem 2rem;
+      border-radius: 60px;
+      background-color: colors.$font-primary;
+      color: colors.$primary-color;
+      border: 3px solid colors.$font-primary;
+      outline: none;
+      text-transform: capitalize;
+      font-family: fonts.$primary-font;
+      font-weight: 600;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: transparent;
+      border: 3px solid colors.$font-primary;
+      color: colors.$font-primary;
+      cursor: pointer;
+    }
+  }
+}
+
+.order-successful {
+  // border-radius: 10px;
+  // position: fixed;
+  // z-index: 99;
+  // top: 0;
+  // left: 0;
+
+  // height: 100vh;
+  // width: 100%;
+  // background-color: rgba(0, 0, 0, 0.6);
+
+  div {
+    // background-color: colors.$secondary-color;
+    // height: 300px;
+    // width: 500px;
+    // margin: 0;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: fonts.$primary-font;
+    gap: 3rem;
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    button {
+      width: 50%;
+      padding: 1rem 2rem;
+      border-radius: 60px;
+      background-color: colors.$font-primary;
+      color: colors.$primary-color;
+      border: 3px solid colors.$font-primary;
+      outline: none;
+      text-transform: capitalize;
+      font-family: fonts.$primary-font;
+      font-weight: 600;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: transparent;
+      border: 3px solid colors.$font-primary;
+      color: colors.$font-primary;
+      cursor: pointer;
+    }
+  }
+}
