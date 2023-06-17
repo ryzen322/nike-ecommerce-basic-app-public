@@ -17,8 +17,9 @@ const cartSlice = createSlice({
     addItemToCart(state, action) {
       const newItem = action.payload;
       // check existence
+      // i saw your app it still add new item in array with the same name id and size it suppose to update the price
       const existingItem = state.items.find(
-        (item) => item.cartId === newItem.cartId
+        (item) => item.cartId === newItem.cartId && item.size === newItem.size
       );
 
       state.changed = true;
